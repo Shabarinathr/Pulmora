@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Pulmora Healthcare</title>
+  <link rel="stylesheet" href="style.css" />
+  <!-- Internal CSS for quick styles -->
+  <style>
+    .cta-button {
+      background-color: #007BFF;
+      color: white;
+      padding: 12px 24px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1rem;
+      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    }
+    .cta-button:hover,
+    .cta-button:focus {
+      background-color: #0056b3;
+      transform: translateY(-3px);
+    box-shadow: 0 4px 12px rgba(0, 123, 255, 0.2);
+    }
+    p {
+  margin: 20px 0;
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Header Section -->
+  <header class="header">
+    <div class="container">
+      <h1 class="logo">Pulmora Healthcare</h1>
+      <nav class="navbar">
+        <a href="home.html">Home</a>
+        <a href="services.html">Services</a>
+        <a href="doctors.html">Doctors</a>
+        <a href="contact.html">Contact</a>
+        <a href="login.html">Login</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <div class="hero-text">
+      <h2>Your Health, Our Priority</h2>
+      <p>Book appointments, consult doctors, and manage your health with ease.</p>
+      <button class="cta-button">Get Started</button>
+      <div class="search-container" style="margin: 40px 0 0 60px;">
+        <input type="text" class="search-bar" placeholder="Search for doctors, specialists or hospitals">
+      </div>      
+    </div> 
+    <div class="hero-image">
+      <img src="images/logo.png" alt="Doctor illustration" />
+    </div> 
+</section>
+
+<section class="why-choose-us">
+    <h2>Why Choose Us</h2>
+    <div class="features">
+      <div class="feature-card">
+        <img src="images/doctor.png" alt="Expert Doctors">
+        <h3>Expert Doctors</h3>
+        <p>Our certified specialists bring years of experience and expertise in their fields.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/clock.png" alt="24/7 Services">
+        <h3>24/7 Emergency Care</h3>
+        <p>Round-the-clock services for emergency and urgent medical care needs.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/equipment.png" alt="Modern Equipment">
+        <h3>Modern Equipment</h3>
+        <p>We use cutting-edge technology for accurate diagnostics and effective treatment.</p>
+      </div>
+      <div class="feature-card">
+        <img src="images/insurance.png" alt="Cashless Insurance">
+        <h3>Cashless Insurance</h3>
+        <p>We accept a wide range of insurance policies to ease your medical expenses.</p>
+      </div>
+    </div>
+  </section>
+  
+  <!-- Services Section -->
+  <section class="services">
+    <h2>Our Services</h2>
+    <div class="services-container">
+      <div class="service-card">
+        <h3>Online Consultation</h3>
+        <p>Connect with certified doctors anytime, anywhere.</p>
+      </div>
+      <div class="service-card">
+        <h3>Appointment Booking</h3>
+        <p>Book visits to clinics or hospitals at your convenience.</p>
+      </div>
+      <div class="service-card">
+        <h3>Health Records</h3>
+        <p>Store and access your medical records securely.</p>
+      </div>
+    </div>
+  </section>
+
+
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+      <div class="footer-left">
+        <img src="images/logo.png" alt="HealthcarePro Logo" class="footer-logo">
+        <p>Your trusted partner in health and wellness.</p>
+      </div>
+  
+      <div class="footer-middle">
+        <h4>Quick Links</h4>
+        <ul>
+          <li><a href="#">Home</a></li>
+          <li><a href="#">Appointments</a></li>
+          <li><a href="#">Services</a></li>
+          <li><a href="#">Doctors</a></li>
+          <li><a href="contact.html">Contact</a></li>
+        </ul>
+      </div>
+  
+      <div class="footer-right">
+        <h4>Contact Us</h4>
+        <p>📞 +91 98765 43210</p>
+        <p>📧 support@Pulmora.com</p>
+        <p>📍 Navi Mumbai, Maharashtra</p>
+      </div>
+    </div>
+  
+    <div class="footer-bottom">
+      <p>&copy; 2025 Pulmora Healthcare. All rights reserved.</p>
+    </div>
+  </footer>  
+ 
+  <!-- //transition -->
+  <script>
+    // Fade-out on link click
+    document.querySelectorAll('a').forEach(link => {
+      if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = this.getAttribute('href');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 300); // Duration should match CSS
+        });
+      }
+    });
+  
+    // Fade-in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  </script>
+  
+</body>
+</html>

@@ -1,0 +1,67 @@
+<!-- login.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Login - HealthcarePro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar (reuse from homepage) -->
+  <header class="header">
+    <div class="container">
+        <h1 class="logo">Pulmora Healthcare</h1>
+        <nav class="navbar">
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+  </header>
+
+  <section class="login-section">
+    <h2>Login to Your Account</h2>
+    <form class="login-form" action="#" method="post">
+      <label for="email">Email</label>
+      <input type="email" id="email" name="email" required />
+
+      <label for="password">Password</label>
+      <input type="password" id="password" name="password" required />
+
+      <button type="submit">Login</button>
+
+      <p class="login-footer">
+        Don’t have an account? <a href="#">Register</a>
+      </p>
+    </form>
+  </section>
+
+  <footer class="site-footer">
+    <!-- Paste your existing footer here -->
+  </footer>
+
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = this.getAttribute('href');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 300);
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  </script>
+
+</body>
+</html>

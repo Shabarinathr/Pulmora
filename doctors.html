@@ -1,0 +1,101 @@
+<!-- doctors.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Our Doctors - HealthcarePro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Navbar (same as homepage) -->
+  <header class="header">
+    <div class="container">
+        <h1 class="logo">Pulmora Healthcare</h1>
+        <nav class="navbar">
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+  </header>
+
+  <section class="doctors-section">
+    <h2>Meet Our Experts</h2>
+    <div class="doctor-card-container">
+
+      <div class="doctor-card">
+        <img src="assets/dr-smith.jpg" alt="Dr. John Smith" />
+        <h3>Dr. John Smith</h3>
+        <p>Cardiologist</p>
+        <p>20+ years of experience in interventional cardiology and cardiac rehabilitation.</p>
+      </div>
+
+      <div class="doctor-card">
+        <img src="assets/dr-gupta.jpg" alt="Dr. Anjali Gupta" />
+        <h3>Dr. Anjali Gupta</h3>
+        <p>Neurologist</p>
+        <p>Expert in treating epilepsy, Parkinson’s disease, and stroke care management.</p>
+      </div>
+
+      <div class="doctor-card">
+        <img src="assets/dr-patel.jpg" alt="Dr. Kiran Patel" />
+        <h3>Dr. Kiran Patel</h3>
+        <p>Orthopedic Surgeon</p>
+        <p>Specialist in knee/hip replacement, sports injuries, and spinal disorders.</p>
+      </div>
+
+    </div>
+  </section>
+
+  <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-left">
+          <img src="images/logo.png" alt="Pulmora" class="footer-logo">
+          <p>Your trusted partner in health and wellness.</p>
+        </div>
+    
+        <div class="footer-middle">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Appointments</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="doctors.html">Doctors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-right">
+          <h4>Contact Us</h4>
+          <p>📞 +91 98765 43210</p>
+          <p>📧 support@Pulmora.com</p>
+          <p>📍 Navi Mumbai, Maharashtra</p>
+        </div>
+      </div>
+  </footer>
+
+  <script>
+    document.querySelectorAll('a').forEach(link => {
+      if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = this.getAttribute('href');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 300);
+        });
+      }
+    });
+
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  </script>
+
+</body>
+</html>

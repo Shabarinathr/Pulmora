@@ -1,0 +1,105 @@
+<!-- contact.html -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Contact Us - HealthcarePro</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- You can reuse the same navbar here -->
+  <header class="header">
+    <div class="container">
+        <h1 class="logo">Pulmora Healthcare</h1>
+        <nav class="navbar">
+          <a href="home.html">Home</a>
+          <a href="services.html">Services</a>
+          <a href="doctors.html">Doctors</a>
+          <a href="contact.html">Contact</a>
+          <a href="login.html">Login</a>
+        </nav>
+      </div>
+  </header>
+
+  <section class="contact-section">
+    <h2>Contact Us</h2>
+    <div class="contact-container">
+      <form class="contact-form">
+        <input type="text" placeholder="Your Name" required />
+        <input type="email" placeholder="Your Email" required />
+        <textarea placeholder="Your Message" rows="5" required></textarea>
+        <button type="submit">Send Message</button>
+      </form>
+
+      <div class="contact-info">
+        <h3>Get in Touch</h3>
+        <p><strong>📍 Address:</strong> Sector 5, Navi Mumbai, Maharashtra</p>
+        <p><strong>📞 Phone:</strong> +91 98765 43210</p>
+        <p><strong>📧 Email:</strong> contact@healthcarepro.com</p>
+
+        <!-- Optional Google Map -->
+        <iframe
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3..."
+          width="100%" height="200" style="border:0; border-radius: 10px;" allowfullscreen loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Reuse your footer -->
+  <footer class="site-footer">
+    <div class="footer-content">
+        <div class="footer-left">
+          <img src="images/logo.png" alt="HealthcarePro Logo" class="footer-logo">
+          <p>Your trusted partner in health and wellness.</p>
+        </div>
+    
+        <div class="footer-middle">
+          <h4>Quick Links</h4>
+          <ul>
+            <li><a href="home.html">Home</a></li>
+            <li><a href="#">Appointments</a></li>
+            <li><a href="services.html">Services</a></li>
+            <li><a href="#">Doctors</a></li>
+            <li><a href="contact.html">Contact</a></li>
+          </ul>
+        </div>
+    
+        <div class="footer-right">
+          <h4>Contact Us</h4>
+          <p>📞 +91 98765 43210</p>
+          <p>📧 support@Pulmora.com</p>
+          <p>📍 Navi Mumbai, Maharashtra</p>
+        </div>
+      </div>
+    
+      <div class="footer-bottom">
+        <p>&copy; 2025 Pulmora Healthcare. All rights reserved.</p>
+      </div>
+  </footer>
+ <!-- // transition -->
+  <script>
+    // Fade-out on link click
+    document.querySelectorAll('a').forEach(link => {
+      if (link.getAttribute('href') && !link.getAttribute('href').startsWith('#')) {
+        link.addEventListener('click', function (e) {
+          e.preventDefault();
+          const target = this.getAttribute('href');
+          document.body.classList.add('fade-out');
+          setTimeout(() => {
+            window.location.href = target;
+          }, 300); // Duration should match CSS
+        });
+      }
+    });
+  
+    // Fade-in on load
+    window.addEventListener('DOMContentLoaded', () => {
+      document.body.classList.add('fade-in');
+    });
+  </script>
+  
+</body>
+</html>
